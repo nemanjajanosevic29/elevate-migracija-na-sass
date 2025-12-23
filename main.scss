@@ -1,0 +1,15 @@
+@use "variables" as *;
+@use "primary-btn";
+@use "header";
+@use "content";
+
+body {
+  font-family: $font-family;
+  color: $color-text;
+  margin: 0;
+  padding: 0;
+
+  h2 {
+    font-size: $font-size-h2;
+  }
+}

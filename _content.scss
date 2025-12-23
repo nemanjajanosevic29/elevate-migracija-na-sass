@@ -1,0 +1,90 @@
+@use "variables" as *;
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $padding-main;
+  gap: 40px;
+
+  @include responsive(576px) {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .content {
+    width: $width-content;
+
+    @include responsive(576px) {
+      width: 100%;
+    }
+
+    h1 {
+      font-size: $font-size-h1;
+      color: $color-primary;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: $font-size-p;
+      margin-bottom: 30px;
+    }
+  }
+
+  img {
+    width: $width-img;
+    max-width: 100%;
+    height: auto;
+
+    @include responsive(576px) {
+      width: 90%;
+      order: -1;
+    }
+  }
+}
+
+.center-section {
+  text-align: center;
+  padding: $padding-center-section;
+
+  &.features {
+    background: $color-bg-features;
+  }
+}
+
+.card-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+
+  .card {
+    background: $color-white;
+    padding: $padding-card;
+    width: $width-card;
+    border-radius: $border-radius-card;
+    box-shadow: $box-shadow-light;
+    text-align: center;
+  }
+
+  @include responsive(992px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+
+    .card {
+      width: $width-card-responsive;
+    }
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: $padding-footer;
+  background: $color-bg-footer;
+  color: $color-white;
+
+  p {
+    margin: 0;
+  }
+}

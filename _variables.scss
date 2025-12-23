@@ -1,0 +1,50 @@
+/* boje */
+$font-family: Arial, sans-serif;
+$color-text: #333;
+$color-primary: #ff7e5f;
+$color-gradient-end: #feb47b;
+$color-shadow-hover: rgba(255, 126, 95, 0.4);
+$color-bg-features: #f3f3f3;
+$color-bg-footer: #222;
+$color-white: white;
+$color-shadow-light: rgba(0, 0, 0, 0.1);
+
+/* fontovi */
+$font-size-h2: 32px;
+$font-size-logo: 24px;
+$font-size-btn: 18px;
+$font-size-p: 18px;
+$font-size-h1: 48px;
+
+/* padding */
+$padding-navbar: 15px 30px;
+$padding-btn: 15px 30px;
+$padding-main: 100px 10px;
+$padding-center-section: 50px 10px;
+$padding-card: 20px;
+$padding-footer: 20px;
+
+/* border-radius */
+$border-radius-btn: 8px;
+$border-radius-card: 10px;
+
+/* box-shadow */
+$box-shadow-light: 0 2px 10px $color-shadow-light;
+$box-shadow-hover: 0px 5px 15px $color-shadow-hover;
+
+/* margine */
+$margin-bottom-navbar: 10px;
+$margin-li: 0 10px;
+
+/* width */
+$width-content: 50%;
+$width-img: 40%;
+$width-card: 27%;
+$width-card-responsive: 80%;
+
+/* Responsive mixin */
+@mixin responsive($max-width) {
+  @media screen and (max-width: $max-width) {
+    @content;
+  }
+}

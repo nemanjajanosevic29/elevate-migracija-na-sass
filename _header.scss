@@ -1,0 +1,44 @@
+@use "variables" as *;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $padding-navbar;
+  box-shadow: $box-shadow-light;
+  margin-bottom: $margin-bottom-navbar;
+
+  .logo {
+    font-size: $font-size-logo;
+    font-weight: bold;
+    color: $color-primary;
+  }
+
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      margin: $margin-li;
+    }
+
+    a {
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+
+    @include responsive(576px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      gap: 12px;
+    }
+  }
+}
