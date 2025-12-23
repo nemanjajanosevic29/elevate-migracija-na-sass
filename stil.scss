@@ -1,11 +1,63 @@
+/* boje */
+$font-family: Arial, sans-serif;
+$color-text: #333;
+$color-primary: #ff7e5f;
+$color-gradient-end: #feb47b;
+$color-shadow-hover: rgba(255, 126, 95, 0.4);
+$color-bg-features: #f3f3f3;
+$color-bg-footer: #222;
+$color-white: white;
+$color-shadow-light: rgba(0, 0, 0, 0.1);
+
+/* fontovi */
+
+$font-size-h2: 32px;
+$font-size-logo: 24px;
+$font-size-btn: 18px;
+$font-size-p: 18px;
+$font-size-h1: 48px;
+
+/* padding */
+
+$padding-navbar: 15px 30px;
+$padding-btn: 15px 30px;
+$padding-main: 100px 10px;
+$padding-center-section: 50px 10px;
+$padding-card: 20px;
+$padding-footer: 20px;
+
+/* border-radius */
+
+$border-radius-btn: 8px;
+$border-radius-card: 10px;
+
+/* box-shadow */
+
+$box-shadow-light: 0 2px 10px $color-shadow-light;
+$box-shadow-hover: 0px 5px 15px $color-shadow-hover;
+
+/* margine */
+
+$margin-bottom-navbar: 10px;
+$margin-li: 0 10px;
+
+/* width */
+
+$width-content: 50%;
+$width-img: 40%;
+$width-card: 27%;
+$width-card-responsive: 80%;
+
+/* KOD */
+
 body{
-    font-family: Arial, sans-serif;
-    color: #333;
+    font-family: $font-family;
+    color: $color-text;
     margin: 0;
     padding: 0;
-    
+
     h2{
-        font-size: 32px;
+        font-size: $font-size-h2;
     }
 }
 
@@ -13,104 +65,102 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
-
-    .logo{
-        font-size: 24px;
-        font-weight: bold;
-        color: #ff7e5f;
-    }
+    padding: $padding-navbar;
+    box-shadow: $box-shadow-light;
+    margin-bottom: $margin-bottom-navbar;
 
     .nav-links{
         list-style: none;
         padding: 0;
-
+        
         li{
             display: inline-block;
-            margin: 0 10px;
+            margin: $margin-li;
         }
 
         a{
             text-decoration: none;
             font-weight: bold;
 
-            &:hover{
-                color: #ff7e5f;
+            &:hover {
+                color: $color-primary;
             }
         }
     }
 }
 
-.primary-btn{
+.primary-btn {
     display: inline-block;
-    padding: 15px 30px;
+    padding: $padding-btn;
     cursor: pointer;
-    font-size: 18px;
+    font-size: $font-size-btn;
     font-weight: bold;
-    color: white;
+    color: $color-white;
     text-decoration: none;
     border: none;
-    border-radius: 8px;
-    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    border-radius: $border-radius-btn;
+    background: linear-gradient(45deg, $color-primary, $color-gradient-end);
 
-    &:hover{
-        box-shadow: 0px 5px 15px rgba(255, 126, 95, 0.4);
+    &:hover {
+        box-shadow: $box-shadow-hover;
     }
 }
 
-.main{
+.main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 100px 10px;
+    padding: $padding-main;
 
-    .content{
-        width: 50%;
+    .content {
+        width: $width-content;
     }
 
-    h1{
-        font-size: 48px;
-        color: #ff7e5f;
+    h1 {
+        font-size: $font-size-h1;
+        color: $color-primary;
     }
 
-    p{
-        font-size: 18px;
+    p {
+        font-size: $font-size-p;
     }
 
-    img{
-        width: 40%;
+    img {
+        width: $width-img;
     }
 }
 
 .center-section {
     text-align: center;
-    padding: 50px 10px;
+    padding: $padding-center-section;
 
     &.features {
-        background: #f3f3f3;
+        background: $color-bg-features;
     }
 }
 
-.card-list{
+.card-list {
     display: flex;
     justify-content: space-between;
 
-    .card{
-        background: white;
-        padding: 20px;
-        width: 27%;
-        border-radius: 10px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    .card {
+        background: $color-white;
+        padding: $padding-card;
+        width: $width-card;
+        border-radius: $border-radius-card;
+        box-shadow: $box-shadow-light;
     }
 }
 
 .footer {
     text-align: center;
-    padding: 20px;
-    background: #222;
-    color: white;
+    padding: $padding-footer;
+    background: $color-bg-footer;
+    color: $color-white;
+
+    p {
+        margin: 0;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -118,8 +168,9 @@ body{
         flex-direction: column;
         align-items: center;
         gap: 50px;
-    }
-    .card {
-        width: 80%;
+
+        .card {
+            width: $width-card-responsive;
+        }
     }
 }
