@@ -48,6 +48,14 @@ $width-img: 40%;
 $width-card: 27%;
 $width-card-responsive: 80%;
 
+/* Mixin */
+
+@mixin responsive($max-width){
+    @media screen and (max-width: $max-width) {
+        @content;
+    }
+}
+
 /* KOD */
 
 body{
@@ -150,6 +158,16 @@ body{
         border-radius: $border-radius-card;
         box-shadow: $box-shadow-light;
     }
+
+    @include responsive(992px){
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+
+    .card{
+        width: $width-card-responsive;
+    }
+}
 }
 
 .footer {
@@ -163,14 +181,3 @@ body{
     }
 }
 
-@media screen and (max-width: 992px) {
-    .card-list {
-        flex-direction: column;
-        align-items: center;
-        gap: 50px;
-
-        .card {
-            width: $width-card-responsive;
-        }
-    }
-}
