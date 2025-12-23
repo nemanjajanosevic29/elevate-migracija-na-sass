@@ -40,6 +40,15 @@ body h2 {
 .navbar .nav-links a:hover {
   color: #ff7e5f;
 }
+@media screen and (max-width: 576px) {
+  .navbar .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+  }
+}
 
 .primary-btn {
   display: inline-block;
@@ -63,8 +72,20 @@ body h2 {
   justify-content: space-between;
   padding: 100px 10px;
 }
+@media screen and (max-width: 576px) {
+  .main {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+}
 .main .content {
   width: 50%;
+}
+@media screen and (max-width: 576px) {
+  .main .content {
+    width: 100%;
+  }
 }
 .main h1 {
   font-size: 48px;
@@ -72,9 +93,18 @@ body h2 {
 }
 .main p {
   font-size: 18px;
+  margin-bottom: 30px;
 }
 .main img {
   width: 40%;
+  max-width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 576px) {
+  .main img {
+    width: 90%;
+    order: -1;
+  }
 }
 
 .center-section {

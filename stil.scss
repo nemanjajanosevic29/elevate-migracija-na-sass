@@ -94,6 +94,14 @@ body{
                 color: $color-primary;
             }
         }
+
+        @include responsive(576px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            gap: 12px;                
+        }
     }
 }
 
@@ -120,8 +128,18 @@ body{
     justify-content: space-between;
     padding: $padding-main;
 
+    @include responsive(576px) {
+        flex-direction: column;         
+        text-align: center;               
+        padding: 60px 20px;               
+    }
+
     .content {
         width: $width-content;
+
+        @include responsive(576px) {
+            width: 100%;               
+        }
     }
 
     h1 {
@@ -131,10 +149,18 @@ body{
 
     p {
         font-size: $font-size-p;
+        margin-bottom: 30px;
     }
 
     img {
         width: $width-img;
+        max-width: 100%;
+        height: auto;
+
+        @include responsive(576px) {
+            width: 90%;
+            order: -1;               
+        }
     }
 }
 
